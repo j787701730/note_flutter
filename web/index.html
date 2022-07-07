@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>笔记</title>
+  <link rel="shortcut icon" href="/js/favicon.ico">
+  <link rel="stylesheet" href="/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="/css/init.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+<body>
+  <div style="display: flex;padding: 12px;">
+    <div style="width: 200px;">
+      <button type="button" class="get-list btn-primary" style="margin-right: 8px;">获取列表</button>
+      <button type="button" class="addNote btn-primary">新增</button>
+    </div>
+    <div style="display: flex">
+      <input class="title" type="text" style="width: 400px;" placeholder="标题">
+      <button type="button" class="save btn-primary">保存</button>
+      <button type="button" class="modify btn-primary" style="margin-left: 12px">编辑</button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="list-container">
+      <div class="note-list"></div>
+    </div>
+    <div class="leftSide">
+      <div class="toolbar">
+        <i class="bi bi-type-bold" title="粗体"></i>
+        <i class="bi bi-type-italic" title="斜体"></i>
+        <i class="bi bi-type-underline" title="下划线"></i>
+        <i class="bi bi-type-strikethrough" title="删除线"></i>
+        <i class="bi bi-blockquote-left" title="引用"></i>
+        <i class="bi bi-list-ul" title="无序列表"></i>
+        <i class="bi bi-list-ol" title="有序列表"></i>
+        <i class="bi bi-type-h1" title="标题1"></i>
+        <i class="bi bi-type-h2" title="标题2"></i>
+        <i class="bi bi-type-h3" title="标题3"></i>
+        <i class="bi bi-dash-lg" title="水平线"></i>
+        <i class="bi bi-table" title="表格"></i>
+        <i class="bi bi-square" title="未完成任务"></i>
+        <i class="bi bi-check-square" title="已完成任务"></i>
+        <i class="bi bi-code-square" title="插入代码"></i>
+        <i class="bi bi-link-45deg" title="插入链接"></i>
+        <span style="display: inline-block;margin-left: 6px;">图片支持截图粘贴</span>
+      </div>
+      <textarea class="editor"></textarea>
+    </div>
+    <div class="rightSide"></div>
+  </div>
+  <div class="dialog-mask">
+    <div class="dialog">
+      <div class="dialog-title">系统提示</div>
+      <div class="dialog-content"></div>
+      <div class="dialog-footer">
+        <button type="button" class="btn-default dailog-cancel" style="margin-right: 8px;">取消</button>
+        <button type="button" class="btn-primary dialog-ok">确认</button>
+      </div>
+    </div>
+  </div>
+  <div class="loading">
+    <img src="/js/loading.gif" alt="">
+  </div>
+  <div class="toast">
+    <div class="toast-msg">保存成功</div>
+  </div>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/highlight.js"></script>
+  <script src="/js/showdown.js"></script>
+  <script src="/js/plugin.js"></script>
+  <script src="/js/index.js"></script>
+</body>
+</html>

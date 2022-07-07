@@ -1,0 +1,132 @@
+.container {
+  display: flex;
+  height: calc(100vh - 56px);
+  padding: 0 12px 12px;
+}
+
+.leftSide {
+  display: none;
+  width: calc(50% - 104px);
+  height: 100%;
+  margin-right: 8px;
+  vertical-align: top;
+  border: 1px solid #ddd;
+}
+
+.editor {
+  width: 100%;
+  height: calc(100% - 34px);
+  padding: 12px;
+  font-size: 14px;
+  overflow: auto;
+  resize: none;
+  line-height: 1.5;
+  background-color: #000;
+  color: #fff;
+}
+
+.rightSide {
+  display: inline-block;
+  width: calc(100% - 200px);
+  height: 100%;
+  vertical-align: top;
+  border: 1px solid #ddd;
+  padding: 12px;
+  overflow: auto;
+}
+
+.container-modify .leftSide {
+  display: inline-block;
+}
+
+.container-modify .rightSide {
+  width: calc(50% - 104px);
+}
+
+.rightSide img {
+  max-width: 100%;
+}
+
+.list-container {
+  width: 200px;
+  height: 100%;
+  overflow: auto;
+}
+
+.note-title {
+  line-height: 34px;
+  cursor: pointer;
+  position: relative;
+  margin-right: 8px;
+  padding-left: 8px;
+}
+
+.note-title.selected {
+  background-color: #e6f7ff;
+}
+
+.note-title.selected:hover {
+  background-color: #e6f7ff;
+}
+
+.note-title:hover {
+  background-color: #f5f5f5;
+}
+
+.note-title span {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.note-title:hover {
+  padding-right: 20px;
+}
+
+.del-note {
+  display: none;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 7px;
+  right: 0;
+  text-align: center;
+  line-height: 24px;
+}
+
+.del-note:hover {
+  color: red;
+  background-color: #fff;
+}
+
+.note-title:hover .del-note {
+  display: inline-block;
+}
+
+.del-note img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.toolbar {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.toolbar i {
+  font-size: 20px;
+  display: inline-block;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.toolbar i:hover {
+  background-color: #f5f5f5;
+  color: var(--primary-color-hover);
+}
